@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_about.*
 
 class AboutActivity : AppCompatActivity() {
     companion object{
-        val EMAIL_URI = "mailto:wupanjie0611@gmail.com"
+        val EMAIL_URI = "mailto:15091766487@163.com"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

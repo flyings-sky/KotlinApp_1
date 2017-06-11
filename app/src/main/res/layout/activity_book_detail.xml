@@ -45,12 +45,12 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.design.widget.FloatingActionButton
-        app:rippleColor="@color/material_amber_50"
+        app:rippleColor="@color/material_deep_purple_a200"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:clickable="true"
-        android:src="@drawable/ic_chrome_reader_mode_white_24dp"
+        android:src="@drawable/book"
         android:id="@+id/fabbutton"
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="bottom|right|end"/>

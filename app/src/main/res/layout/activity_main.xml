@@ -36,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@mipmap/ic_github"
-        app:rippleColor="@color/material_amber_50"/>
+        android:src="@drawable/project"
+        app:rippleColor="@color/material_deep_purple_a200"
+        />
 
 </android.support.design.widget.CoordinatorLayout>
