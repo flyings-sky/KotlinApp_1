@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">KotlinApp_1</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_info">漫画详情</string>
+    <string name="action_about">关于</string>
+    <string name="tab_one">在线漫画</string>
+    <string name="tab_two">漫画列表</string>
+    <string name="tab_three">动漫资讯</string>
+    <string name="network_error">网络加载失败，请重试！</string>
+    <string name="page_load_error">页面信息加载错误，有几个链接鼠绘是重定向的，好奇怪，有很多都是这样的，也有一些是好的，当然也有可能是网络问题，Sorry～</string>
+    <string name="title_activity_news_detail">NewsDetailActivity</string>
+    <string name="about_name">关于</string>
+    <string name="about_me">关于我</string>
+    <string name="my_info">大家好，我是一名西安邮电大学计算机科学与技术专业的大三学生，正在梦想着成为一名优秀的Android工程师，每天都为此努力着，希望大家给我一点鼓励和建议。</string>
+    <string name="about_project">关于本项目</string>
+    <string name="project_info">这个项目是为了学习Kotlin而写的，这个项目使用了OkHttp进行网络请求，Picasso加载图片，数据来源于鼠绘漫画网，用Jsoup进行Html解析，仅用于学习用途。目前本项目正在处于优化阶段</string>
+    <string name="about_link">相关链接</string>
+    <string name="link_two">我的Github主页\n https://github.com/flyings-sky</string>
+    <string name="link_three">我的Github Pages\n  https://wuapnjie.github.io</string>
+    <string name="about_thank">使用的库</string>
+    <string name="thank_info">OkHttp \nPicasso \nJsoup</string>
+</resources>
