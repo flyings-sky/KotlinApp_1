@@ -22,7 +22,7 @@ import org.jetbrains.anko.uiThread
  */
 class BookFragment:Fragment() {
     companion object{
-        val AIM_URL = "http://ishuhui.net/ComicBookList/"
+        val AIM_URL = "http://www.ishuhui.net/ComicBookList/"
     }
 
     var mData = ArrayList<Cover>()
@@ -64,7 +64,7 @@ class BookFragment:Fragment() {
     }
 
     private fun jump2Detail(position:Int){
-        var intent = Intent(context, BookDetailActivity().javaClass)
+        val intent = Intent(context, BookDetailActivity().javaClass)
         intent.putExtra(BookDetailActivity.INTENT_COVER_URL,mData[position].coverUrl)
         intent.putExtra(BookDetailActivity.INTENT_URL,mData[position].link)
         intent.putExtra(BookDetailActivity.INTENT_TITLE,mData[position].title)

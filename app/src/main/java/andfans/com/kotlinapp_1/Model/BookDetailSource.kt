@@ -10,7 +10,7 @@ import org.jsoup.Jsoup
  *
  * Created by 兆鹏 on 2017/6/7.
  */
-class BookDetailSource():Source<BookDetail> {
+class BookDetailSource :Source<BookDetail> {
     override fun obtain(url: String): BookDetail {
         val html = getHtml(url)
         val doc = Jsoup.parse(html)
@@ -20,7 +20,7 @@ class BookDetailSource():Source<BookDetail> {
 
         for (element in elements) {
             val title = element.text()
-            val link = "http://ishuhui.net/" + element.attr("href")
+            val link = "http://www.ishuhui.net/" + element.attr("href")
             val page = Page(title, link)
             pages.add(page)
         }

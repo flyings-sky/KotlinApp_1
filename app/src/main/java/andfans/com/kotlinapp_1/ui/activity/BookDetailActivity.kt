@@ -91,7 +91,7 @@ class BookDetailActivity : AppCompatActivity() {
     }
 
     private fun jump2Read(position:Int){
-        var intent = Intent(this,ComicActivity().javaClass)
+        val intent = Intent(this,ComicActivity().javaClass)
         intent.putExtra(ComicActivity.INTENT_COMIC_URL,bookDetail[position].link)
         startActivity(intent)
     }

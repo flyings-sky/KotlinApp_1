@@ -26,7 +26,7 @@ class NewsContainerAdapter(var data:List<NewsContainer> = ArrayList()):RecyclerV
         itemView.rv_child_container.layoutManager = LinearLayoutManager(itemView.context)
         itemView.rv_child_container.adapter = NewsAdapter(newsContainer.newsList)
         itemView.tv_more.setOnClickListener {
-            var intent = Intent(itemView.context,NewsMoreActivity().javaClass)
+            val intent = Intent(itemView.context,NewsMoreActivity().javaClass)
             intent.putExtra(NewsMoreActivity.TOOLBAR_TITLE,newsContainer.title)
             intent.putExtra(NewsMoreActivity.MORE_LINK,newsContainer.moreLink)
             itemView.context.startActivity(intent)

@@ -1,8 +1,7 @@
-package com.flying.xiaopo.poishuhui_kotlin.domain.network
+package andfans.com.kotlinapp_1.Model
 
 import andfans.com.kotlinapp_1.Data.News
 import andfans.com.kotlinapp_1.Data.NewsContainer
-import andfans.com.kotlinapp_1.Model.Source
 import andfans.com.kotlinapp_1.Util.getHtml
 import org.jsoup.Jsoup
 import java.util.*

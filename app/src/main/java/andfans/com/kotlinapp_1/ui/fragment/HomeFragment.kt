@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class HomeFragment : Fragment(){
     //伴生对象，可以使用类名.变量名的方式访问，类似于static
     companion object{
-        val AIM_URL = "http://ishuhui.net/?PageIndex=1"
+        val AIM_URL = "http://www.ishuhui.net/?PageIndex=1"
     }
     var mData = ArrayList<Cover>()
     //延迟初始化下面三个属性
@@ -75,7 +75,7 @@ class HomeFragment : Fragment(){
     }
 
     private fun jump2Comic(position:Int){
-        var intent = Intent(context,ComicActivity().javaClass)
+        val intent = Intent(context,ComicActivity().javaClass)
         intent.putExtra(ComicActivity.INTENT_COMIC_URL,mData[position].link)
         startActivity(intent)
     }

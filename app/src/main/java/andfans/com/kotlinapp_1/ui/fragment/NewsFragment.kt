@@ -1,6 +1,7 @@
 package andfans.com.kotlinapp_1.ui.fragment
 
 import andfans.com.kotlinapp_1.Data.NewsContainer
+import andfans.com.kotlinapp_1.Model.NewsSource
 import andfans.com.kotlinapp_1.R
 import andfans.com.kotlinapp_1.ui.adapter.NewsContainerAdapter
 import android.os.Bundle
@@ -9,7 +10,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.flying.xiaopo.poishuhui_kotlin.domain.network.NewsSource
 import kotlinx.android.synthetic.main.fragment_news.*
 import org.jetbrains.anko.async
 import org.jetbrains.anko.uiThread
@@ -58,7 +58,7 @@ class NewsFragment:Fragment() {
 
     private fun load(){
         async {
-            var data = NewsSource().obtain(AIM_URL)
+            val data = NewsSource().obtain(AIM_URL)
             uiThread {
                 mData = data
                 adapter.refreshData(data)

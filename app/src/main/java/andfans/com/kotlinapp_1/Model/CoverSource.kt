@@ -18,7 +18,7 @@ class CoverSource : Source<ArrayList<Cover>> {
         for (element in elements){
             val coverUrl = element.select("img").attr("src")
             val title = element.select("h1").text() + "\n" + element.select("h2").text()
-            val link = "http://ishuhui.net" + element.select("div.magesPhoto").select("a").attr("href")
+            val link = "http://www.ishuhui.net" + element.select("div.magesPhoto").select("a").attr("href")
             val cover = Cover(coverUrl,title,link)
             list.add(cover)
         }

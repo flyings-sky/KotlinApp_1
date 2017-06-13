@@ -8,7 +8,7 @@ import org.jsoup.Jsoup
  *
  * Created by 兆鹏 on 2017/6/7.
  */
-class ComicSource():Source<ArrayList<Comic>>{
+class ComicSource :Source<ArrayList<Comic>>{
     override fun obtain(url: String): ArrayList<Comic> {
         val html = getHtml(url)
         val doc = Jsoup.parse(html)
@@ -20,7 +20,7 @@ class ComicSource():Source<ArrayList<Comic>>{
             val temp = element.attr("src")
             if(temp.contains(".png")||temp.contains(".jpg")||temp.contains(".JPEG")){
                 comicUrl = temp
-            }else if(!"".equals(element.attr("data-original"))){
+            }else if("" != element.attr("data-original")){
                 comicUrl = element.attr("data-original")
             }else{
                 continue
