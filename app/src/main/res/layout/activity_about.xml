@@ -153,11 +153,11 @@
                         />
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:autoLink="web"
-                        android:text="@string/link_three"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:layout_marginTop = "8dp"
+                        android:autoLink = "web"
+                        android:text = "@string/link_three"
                         />
                 </LinearLayout>
             </android.support.v7.widget.CardView>

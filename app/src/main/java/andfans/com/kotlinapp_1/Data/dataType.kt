@@ -19,4 +19,4 @@ data class BookDetail(val pages:List<Page>,val info:BookInfo){
 
 data class News(val title: String,val createdTime:String,val link: String)
 
-data class NewsContainer(val title: String,val newsList:List<News>)
+data class NewsContainer(val title: String,val newsList:List<News>,val moreLink:String)

@@ -32,6 +32,10 @@ class NewsAdapter(var data:List<News> = ArrayList())
         }
     }
 
+    fun refreshData(newData:List<News>){
+        data = newData
+        notifyDataSetChanged()
+    }
     override fun getItemCount() = data.size
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): NewsAdapterViewHolder {

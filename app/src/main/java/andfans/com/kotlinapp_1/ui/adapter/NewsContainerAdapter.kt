@@ -2,6 +2,8 @@ package andfans.com.kotlinapp_1.ui.adapter
 
 import andfans.com.kotlinapp_1.Data.NewsContainer
 import andfans.com.kotlinapp_1.R
+import andfans.com.kotlinapp_1.ui.activity.NewsMoreActivity
+import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -23,6 +25,12 @@ class NewsContainerAdapter(var data:List<NewsContainer> = ArrayList()):RecyclerV
         itemView.tv_container_title.text = newsContainer.title
         itemView.rv_child_container.layoutManager = LinearLayoutManager(itemView.context)
         itemView.rv_child_container.adapter = NewsAdapter(newsContainer.newsList)
+        itemView.tv_more.setOnClickListener {
+            var intent = Intent(itemView.context,NewsMoreActivity().javaClass)
+            intent.putExtra(NewsMoreActivity.TOOLBAR_TITLE,newsContainer.title)
+            intent.putExtra(NewsMoreActivity.MORE_LINK,newsContainer.moreLink)
+            itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = data.size

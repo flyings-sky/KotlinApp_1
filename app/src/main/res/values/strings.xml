@@ -15,7 +15,7 @@
     <string name="about_project">关于本项目</string>
     <string name="project_info">这个项目是为了学习Kotlin而写的，这个项目使用了OkHttp进行网络请求，Picasso加载图片，数据来源于鼠绘漫画网，用Jsoup进行Html解析，仅用于学习用途。目前本项目正在处于测试和优化阶段</string>
     <string name="about_link">相关链接</string>
-    <string name="link_two">我的Github主页\n https://github.com/flyings-sky</string>
+    <string name="link_two">我的Github主页\n  https://github.com/flyings-sky</string>
     <string name="link_three">项目地址\n  https://github.com/flyings-sky/KotlinApp_1</string>
     <string name="about_thank">使用的库</string>
     <string name="thank_info">OkHttp \nPicasso \nJsoup</string>
