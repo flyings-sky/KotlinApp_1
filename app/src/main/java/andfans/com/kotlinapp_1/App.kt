@@ -3,6 +3,7 @@ package andfans.com.kotlinapp_1
 import android.app.Application
 import com.squareup.picasso.LruCache
 import com.squareup.picasso.Picasso
+import top.wefor.circularanim.CircularAnim
 
 /**
  *
@@ -14,5 +15,6 @@ class App:Application() {
         super.onCreate()
         val maxMem = Runtime.getRuntime().maxMemory().toInt()
         Picasso.Builder(this).memoryCache(LruCache(maxMem/8)).build()
+        CircularAnim.init(200, 300, R.color.colorAccent)
     }
 }

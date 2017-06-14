@@ -8,9 +8,9 @@
         <!--<item name="android:colorControlHighlight">@color/colorAccent</item>-->
     </style>
 
-    <style name="AppTheme.NoActionBar.Overlay">
+    <style name="AppTheme.NoActionBars" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!--<item name="android:colorControlHighlight">@color/colorAccent</item>-->

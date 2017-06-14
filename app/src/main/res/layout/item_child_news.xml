@@ -6,7 +6,10 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="40dp"
-	android:orientation="horizontal">
+	android:orientation="horizontal"
+	android:layout_marginLeft="3dp"
+	android:layout_marginRight="3dp"
+	>
 
 	<TextView
 		android:id="@+id/tv_title"
@@ -16,7 +19,8 @@
 		android:layout_weight="1"
 		android:gravity="center_vertical"
 		android:text="This is title"
-		android:textSize="@dimen/news_child_size"/>
+		android:textSize="12dp"
+		/>
 
 	<TextView
 		android:id="@+id/tv_time"
@@ -25,5 +29,6 @@
 		android:layout_gravity="right"
 		android:gravity="bottom"
 		android:text="2015-08-30 18:02:06"
-		android:textSize="@dimen/news_child_size"/>
+		android:textSize="12dp"
+		/>
 </LinearLayout>

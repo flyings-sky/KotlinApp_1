@@ -5,13 +5,16 @@ import andfans.com.kotlinapp_1.ui.adapter.ContentPagerAdapter
 import andfans.com.kotlinapp_1.ui.fragment.BookFragment
 import andfans.com.kotlinapp_1.ui.fragment.HomeFragment
 import andfans.com.kotlinapp_1.ui.fragment.NewsFragment
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -19,12 +22,14 @@ class MainActivity : AppCompatActivity() {
     companion object{
         val GITHUB_URL = "https://github.com/flyings-sky/KotlinApp_1"
     }
-
+    lateinit var mContext:Context
+    var mExitTime:Long = 0
     val nameResList:ArrayList<Int> = arrayListOf(R.string.tab_one,R.string.tab_two,R.string.tab_three)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mContext = this
         init()
     }
 
@@ -72,5 +77,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            if(System.currentTimeMillis() - mExitTime > 2000){
+                Toast.makeText(mContext,"再按一次退出程序",Toast.LENGTH_SHORT).show()
+                mExitTime = System.currentTimeMillis()
+            }else{
+                finish()
+            }
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
     }
 }
