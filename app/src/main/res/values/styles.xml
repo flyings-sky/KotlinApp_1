@@ -12,7 +12,7 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-    <style name="AppTheme.NoActionBars" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme.NoActionBar.Overlay" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>

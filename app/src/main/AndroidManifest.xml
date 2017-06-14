@@ -23,10 +23,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activity.AboutActivity"
-            android:theme="@style/AppTheme.NoActionBars" />
+            android:theme="@style/AppTheme.NoActionBar.Overlay" />
         <activity
             android:name=".ui.activity.BookDetailActivity"
-            android:theme="@style/AppTheme.NoActionBars" />
+            android:theme="@style/AppTheme.NoActionBar.Overlay" />
         <activity android:name=".ui.activity.NewsMoreActivity" />
         <activity android:name=".ui.activity.OpeningActivity"
             android:theme="@style/FullScreen"
