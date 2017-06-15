@@ -9,13 +9,4 @@
         android:layout_height="match_parent"
         android:id="@+id/particleTextView"
         />
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/start"
-        android:id="@+id/start"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        />
-
 </FrameLayout>

@@ -55,7 +55,6 @@ class HomeFragment : Fragment(){
 
     private fun initView() {
         mCoverList.layoutManager = GridLayoutManager(context,2)
-//      CoverAdapter(mData,)
         //由于第一个参数存在默认值，所以可以只传入第二个参数
         mAdapter = CoverAdapter { _: View, position: Int ->  jump2Comic(position)}
         mCoverList.adapter = mAdapter

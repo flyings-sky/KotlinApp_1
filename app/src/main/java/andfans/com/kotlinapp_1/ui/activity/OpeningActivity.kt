@@ -2,14 +2,9 @@ package andfans.com.kotlinapp_1.ui.activity
 
 import andfans.com.kotlinapp_1.MainActivity
 import andfans.com.kotlinapp_1.R
-import android.animation.Animator
-import android.animation.ObjectAnimator
-import android.animation.PropertyValuesHolder
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.animation.*
 import com.yasic.library.particletextview.MovingStrategy.RandomMovingStrategy
 import com.yasic.library.particletextview.Object.ParticleTextViewConfig
 import kotlinx.android.synthetic.main.activity_opening.*
@@ -25,18 +20,6 @@ class OpeningActivity : AppCompatActivity() {
     }
 
     private fun init(){
-        val valuesHolder1 = PropertyValuesHolder.ofFloat("alpha",1.0f,0.3f)
-        val valuesHolder2 = PropertyValuesHolder.ofFloat("rotation",0.0f,360.0f)
-//        val valuesHolder3 = PropertyValuesHolder.ofFloat("rotationY",0.0f,360.0f,0.0f)
-        val objectAnimator = ObjectAnimator.ofPropertyValuesHolder(start,valuesHolder1,valuesHolder2)
-//        val objectAnimator = ObjectAnimator.ofPropertyValuesHolder(start,valuesHolder1,valuesHolder2,valuesHolder3)
-        //val rotateAnimation = RotateAnimation(0f,360f,Animation.RELATIVE_TO_SELF,
-                //0.5f,Animation.RELATIVE_TO_SELF,0.5f)
-        //val alphaAnimation = AlphaAnimation(1.0f,0.1f)
-        //val animationSet = AnimationSet(true)
-        //animationSet.addAnimation(rotateAnimation)
-        //animationSet.addAnimation(alphaAnimation)
-        //animationSet.duration = 1000
         val randomMovingStrategy = RandomMovingStrategy()
         val config = ParticleTextViewConfig.Builder()
                 .setRowStep(8)
@@ -60,50 +43,12 @@ class OpeningActivity : AppCompatActivity() {
                 }
             }
             if(flag){
-                Thread.sleep(1000)
+                Thread.sleep(400)
                 uiThread {
-                    particleTextView.stopAnimation()
-                    start.visibility = View.VISIBLE
+                    startActivitys()
                 }
             }
         }
-
-        start.setOnClickListener {
-            objectAnimator.setDuration(1000).start()
-            objectAnimator.addListener(object :Animator.AnimatorListener{
-                override fun onAnimationRepeat(animation: Animator?) {
-
-                }
-
-                override fun onAnimationEnd(animation: Animator?) {
-                    start.setImageResource(R.drawable.start_end)
-                    startActivitys()
-                }
-
-                override fun onAnimationCancel(animation: Animator?) {
-                }
-
-                override fun onAnimationStart(animation: Animator?) {
-                }
-            })
-//                start.animation = animationSet
-//                start.startAnimation(animationSet)
-//                animationSet.setAnimationListener(object : Animation.AnimationListener{
-//                    override fun onAnimationEnd(animation: Animation?) {
-//                        start.setImageResource(R.drawable.start_end)
-//                        startActivitys()
-//                    }
-//
-//                    override fun onAnimationRepeat(animation: Animation?) {
-//
-//                    }
-//
-//                    override fun onAnimationStart(animation: Animation?) {
-//
-//                    }
-//                })
-        }
-
     }
 
     fun startActivitys(){
